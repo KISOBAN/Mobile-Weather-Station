@@ -52,8 +52,6 @@ while x > -50:
         oled.text(" Sensor Data:", 0,38)
      
         if (myButton.value() != previous): #if you press the button it takes a reading from the temperature sensor
-                                           #the reason this is in a conditional statement is because it is not necessary to be
-                                           #taking measurements every second that the pico is operating especially if you are stationary
             sensor.measure()
             tempC = sensor.temperature()
             hum = sensor.humidity()
